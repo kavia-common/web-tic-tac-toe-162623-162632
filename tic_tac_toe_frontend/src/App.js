@@ -37,17 +37,9 @@ function evaluateWinner(squares) {
  * Square button component
  */
 function Square({ value, onClick, isWinning, disabled, index }) {
-  const classes = [
-    'ttt-square',
-    isWinning ? 'winning' : '',
-    value === 'O' ? 'o' : ''
-  ]
-    .filter(Boolean)
-    .join(' ');
-
   return (
     <button
-      className={classes}
+      className={`ttt-square ${isWinning ? 'winning' : ''}`}
       onClick={onClick}
       disabled={disabled}
       aria-label={`Cell ${index + 1} ${value ? 'occupied by ' + value : 'empty'}`}

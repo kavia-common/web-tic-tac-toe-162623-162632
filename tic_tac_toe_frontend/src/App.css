@@ -17,7 +17,7 @@
   --square-border: #e5e7eb;
   --square-hover: #eef2ff;
   --square-x: var(--color-primary);
-  --square-o: #2e7d32; /* Green for O markers */
+  --square-o: var(--color-secondary);
 
   --card-shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
   --radius: 14px;
@@ -74,7 +74,7 @@
   font-size: 28px;
   letter-spacing: 0.4px;
   font-weight: 700;
-  color: red; /* Updated per requirement: main title should be red */
+  color: var(--text);
 }
 
 /* Board */
@@ -123,11 +123,6 @@
 /* Distinguish X vs O by color */
 .ttt-square:where(:not(:empty)) {
   color: var(--square-x);
-}
-
-/* When the square holds an 'O', switch its color to green only */
-.ttt-square.o {
-  color: var(--square-o);
 }
 .ttt-square:where(:not(:empty)):has(:where(*)) {
   /* placeholder for future nested content */
