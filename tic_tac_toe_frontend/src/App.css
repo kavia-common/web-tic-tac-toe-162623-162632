@@ -74,7 +74,7 @@
   font-size: 28px;
   letter-spacing: 0.4px;
   font-weight: 700;
-  color: red; /* Updated per requirement: main title should be red */
+  color: var(--text);
 }
 
 /* Board */
